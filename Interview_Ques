@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shopping Cart</title>
+</head>
+
+<body>
+</body>
+
+<script>
+    const orderHistory = [
+      { orderId: 1, productName: "Apple Watch", quantity: 2, price: 2000},
+      { orderId: 2, productName: "Books", quantity: 1, price: 800},
+      { orderId: 3, productName: "Shirt", quantity: 3, price: 600},
+      { orderId: 4, productName: "speaker", quantity: 1, price: 1500},
+      { orderId: 5, productName: "Books", quantity: 5, price: 1000},
+    ];
+
+    function filterOrdersByProductName(orderHistory, productName){
+      return orderHistory.filter(order => order.productName.trim().toLowerCase() === productName.trim().toLowerCase());
+    }
+
+    console.log(filterOrdersByProductName(orderHistory, "books"));
+    
+</script>
+</html>
